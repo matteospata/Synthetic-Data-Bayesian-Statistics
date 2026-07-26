@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthetic-data-bayesian-platform"
+version = "0.1.0"
+description = "A reproducible platform for tabular synthetic data generation and Bayesian analysis."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Matteo Spata"}]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "torch>=2.0",
+]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.100", "uvicorn[standard]>=0.23"]
+dev = ["pytest>=7.0", "ruff>=0.4"]
+spark = ["pyspark>=3.5,<4"]
+full = ["fastapi>=0.100", "uvicorn[standard]>=0.23", "pyspark>=3.5,<4", "pytest>=7.0", "ruff>=0.4"]
+
+[project.scripts]
+synthetic-data = "synthetic_data_platform.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

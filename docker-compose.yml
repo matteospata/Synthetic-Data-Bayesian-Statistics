@@ -1,0 +1,10 @@
+services:
+  synthetic-data:
+    build: .
+    environment:
+      SYNTHETIC_DATA_SEED: "42"
+      SYNTHETIC_DATA_DEVICE: "cpu"
+    volumes:
+      - ./data:/app/data:ro
+      - ./artifacts:/app/artifacts
+    command: ["run", "--input", "data/raw/customer_events.csv", "--output", "artifacts", "--model", "vae", "--epochs", "120", "--samples", "500", "--use-spark"]
