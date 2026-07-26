@@ -1,4 +1,4 @@
-# Synthetic Data & Bayesian Analytics Platform
+# Synthetic Data & Bayesian Analytics
 
 Production-minded reference project for generating mixed-type tabular synthetic data with deep generative models and validating it with Bayesian statistics.
 
