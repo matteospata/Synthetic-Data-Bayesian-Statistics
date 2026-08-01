@@ -183,6 +183,3 @@ src/synthetic_data_platform/
 - Prefect/Dagster orchestration and cloud object storage;
 - model registry and signed artifact manifests.
 
-## Suggested LinkedIn summary
-
-> Built an end-to-end Synthetic Data & Bayesian Analytics Platform with PyTorch VAE/GAN models, data quality evaluation, posterior uncertainty analysis, reproducible artifacts, CLI/API interfaces, Docker, and automated testing.
